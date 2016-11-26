@@ -1,0 +1,12 @@
+﻿
+.setting_main{
+    background-color:rgb(255, 255, 255);
+    width:1024px;
+    min-height:100px;
+    margin:1.2em auto;
+    box-shadow:2px 2px 2px rgb(200,200,200);
+    border-radius:3px;
+}
+.setting_main ul{
+    list-style:none;
+}

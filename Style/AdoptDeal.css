@@ -1,0 +1,27 @@
+﻿.adopt_deal_main{
+    width:1024px;
+    min-height:100px;
+    margin:2em auto;
+}
+.adopt_deal_an img{
+    width:250px;
+    height:250px;
+    box-shadow:2px 2px 2px rgb(229, 229, 230);
+}
+.adopt_deal_an > div{
+    float:left;
+}
+.adopt_deal_d{
+    margin:2em; 
+}
+.adopt_deal_form{
+    width:1024px;
+    margin-top:2em;
+}
+.adopt_deal_form > h2{
+    color:rgba(231,129,112,1);
+}
+.adopt_f{
+    width:15em;
+    margin:2em auto;
+}

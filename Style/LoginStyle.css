@@ -1,0 +1,115 @@
+﻿
+body {
+    width:100%;
+    font-family:"Microsoft YaHei"
+}
+* {
+    margin: 0;
+    padding:0;
+}
+.mainCon {
+    width:100%;
+    height:100%;
+    margin:3em auto;
+}
+.mainCon h1{
+    text-align:center;
+    color:rgba(231,129,112,1);
+    font-size:8em;
+    position:relative;
+}
+.mainCon h3{
+    text-align:center;
+    color:rgba(231,129,112,1);
+    font-size:3em;
+}
+.mainCon h4{
+    width:940px;
+    margin:4em auto;
+    border-bottom: 1px solid #eeeeee;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 20px;
+    text-rendering: optimizelegibility;
+    text-align:center;
+}
+.mainCon h4 span {
+    position: relative;
+    top: 10px;
+    padding: 0 30px;
+    background: white;
+
+
+}
+
+.mainCon h4 span a {
+    text-align: center;
+}
+
+.mainCon h4 a,b {
+    color: #b1b1b1;
+    text-decoration: none;  
+}
+#active {
+    color: #555555;
+    text-decoration: none;
+}
+
+
+.loginDiv {
+    margin-top:3em;
+    position:relative;
+}
+.formS {
+    width:300px;
+    height:44px;
+    margin:1em auto;
+}
+.form_span {
+    width:39px;
+    line-height:44px;
+    display:inline-block;
+    position:relative;
+    top:2.5px;
+    background-color:rgba(0,0,0,0.1);
+    border:solid 1px rgba(0,0,0,0.4);
+    border-right:none;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+    margin-right:0;
+    text-align:center;
+}
+.labelS{
+    border:none;
+    display:inline-block;
+    position:relative;
+    top:-2.2em;
+    left:21em;
+    font-family:"SimSun-ExtB";
+    color:red;
+    font-size:0.9em;
+}
+.inputForm {
+    margin-left:-5px;
+    display:inline-block;
+    width:256px;
+    height:43.6px;
+    border:solid 1px rgba(0,0,0,0.4);
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+.buttonForm {
+    width:100%;
+    background-color:rgba(4,156,219,1);
+    color:white;
+    border:none;
+    border-radius:3px;
+    font-size:1.5em;
+}
+
+.collect_m_close {
+    position:absolute;
+    top:1em;
+    right:1em;
+    color:rgb(231,129,112);
+}

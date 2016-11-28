@@ -46,9 +46,9 @@ body {
     text-align: center;
 }
 
-.mainCon h4 a,b {
-    color: #b1b1b1;
-    text-decoration: none;  
+.mainCon h4 a,b {   
+    color:rgba(0,0,0,1);  
+    text-decoration:none;
 }
 #active {
     color: #555555;
@@ -64,6 +64,23 @@ body {
     width:300px;
     height:44px;
     margin:1em auto;
+}
+
+.radioS{
+    line-height:3em;
+}
+.radioS > input{
+    margin-left:2em;
+}
+.radioS > label{
+    margin-left:0.5em;
+}
+.formS input{
+    padding-left:1em;
+    box-sizing:border-box;
+}
+.formS  input:nth-child(2n+1){
+    padding:0;
 }
 .form_span {
     width:39px;
@@ -112,4 +129,12 @@ body {
     top:1em;
     right:1em;
     color:rgb(231,129,112);
+}
+
+#RegularExpressionValidator1{
+    position:relative;
+    top:-2em;
+    left:21em;
+    font-size:0.9em;
+    color:red;
 }

@@ -32,7 +32,7 @@
                     <li><a href="/Account/main.aspx">动物</a></li>
                     <li><a href="/Account/adopt.aspx">领养</a></li>
                     <li><a href="/Account/collect.aspx">募捐</a></li>
-                    <li><a href="#">照片</a></li>
+                    <li><a href="/Account/news.aspx">社区</a></li>
                 </ul>
             </nav>
         </div>

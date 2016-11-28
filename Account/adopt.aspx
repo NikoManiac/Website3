@@ -35,11 +35,14 @@
         <div class="adopt_detail">
             <img src="../Images/hacker1.jpg" alt="Alternate Text" />
             <div class="adopt_detail_show">
-                <h5>小花</h5>
+                <h4>小花</h4>
                 <hr />
-                <p>品种</p>
-                <p>年龄</p>
-                <p>介绍</p>
+                <h5>品种：</h5>
+                <span>content</span>
+                <h5>年龄：</h5>
+                <span>content</span>
+                <h5>介绍：</h5>
+                <span>content</span>
                 <a href="adopt_deal.aspx">去领养</a>
             </div>
         </div>

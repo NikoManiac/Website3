@@ -20,9 +20,7 @@
         </div>
         <h4>
             <span>
-                <a id="active" href="Default.aspx">登录</a>
-                <b>·</b>
-                <a href="Account/register.aspx">注册</a>
+                <a id="active" href="Default.aspx">登<b>·</b>录</a>                
             </span>
         </h4>
         <form id="form1" runat="server">
@@ -30,21 +28,27 @@
                 <!-- 输入用户名 -->
                 <div class="formS">
                     <span class="form_span"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                    <asp:TextBox ID="TextBoxMail" runat="server" CssClass="inputForm"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxMail" placeholder="请输入邮箱" runat="server" CssClass="inputForm"></asp:TextBox>
                     <asp:Label ID="LabelShow" runat="server" Text="" CssClass="labelS"></asp:Label>
                 </div>
                
                 <!-- 输入密码 -->
                 <div class="formS">
                     <span class="form_span"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-                    <asp:TextBox ID="TextBoxPwd" runat="server" CssClass="inputForm"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxPwd" placeholder="请输入密码" runat="server" CssClass="inputForm"></asp:TextBox>
                 </div>
                 
                 <div class="formS">
                     <asp:Button ID="Button1" runat="server" Height="39px" OnClick="Button1_Click" CssClass="buttonForm" Text="登录" />
                 </div>
+                <!-- 记住密码  忘记密码-->
+                <div class="formS">
+                    <asp:CheckBox ID="CheckBox1" Text="记住密码" runat="server"/>
+                    <a style="margin-left:9em;text-decoration:none;color:rgb(0,0,0);" href="#">忘记密码</a>
+                </div>
              </div>
         </form>
+        
     </div> 
     <footer></footer>
     <div onclick="window.location.href='../index.aspx'" class="collect_m_close">

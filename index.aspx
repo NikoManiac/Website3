@@ -13,8 +13,8 @@
 <body>
     <header>
         <div class="sign">
-            <span><a href="Account/login.aspx">登录</a></span>
-            <span><a href="#">注册</a></span>           
+            <span><a href="/Account/login.aspx">登录</a></span>
+            <span><a href="/Account/register.aspx">注册</a></span>           
         </div>
         <div class="banner">
             <nav>

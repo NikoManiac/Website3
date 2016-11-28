@@ -46,37 +46,31 @@
         </div>
         <!--这里用于介绍动物保护的公益组织-->
         <div class="title">
+
             <h5>
                 <span>
                     <a href="#">公益·组织</a>
                 </span>
             </h5>
-            <div class="collect_content_detail">
-                <div class="collect_img">
-                    <img src="../Images/logo1.jpg" alt="Alternate Text" />
-                </div>
-                <div class="collect_page">
-                    <span>介绍</span>
-                </div>
-                <div class="collect_button">
-                    <a href="#" onclick="openCollect()">去捐款</a>
-                </div>
-                <div style="clear:both"></div>
-            </div>
+             <asp:DataList ID="DataList1" runat="server" RepeatColumns="1">
+                 <ItemTemplate>
+                    <div class="collect_content_detail">
+                        <div class="collect_img">
+                            <img class="collect_img_d" src=<%#Eval("collecttitle") %> alt="Alternate Text" />
+                        </div>
+                        <div class="collect_page">
+                            <h4><%#Eval("collectname") %></h4>
+                            <span><%#Eval("collectcontent") %></span>
+                        </div>
+                        <div class="collect_button">
+                            <a href="#" onclick="openCollect()">去捐款</a>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                </ItemTemplate>
+             </asp:DataList>
             <div style="clear:both"></div>
         </div>
-        <!--相关的网站-->
-        <div class="title">
-            <h5>
-                <span>
-                    <a href="#">公益·网站</a>
-                </span>
-            </h5>
-            <div>
-
-            </div>
-        </div>
-        
 
     </div>
     <form id="form1" runat="server">
@@ -87,18 +81,25 @@
     <!--当用户点击去捐款后弹出的界面-->
     <div id="site_collect" class="collect_m">
         <div class="collect_m_form">
+            <div class="collect_m_title">
+                <h4>捐款项目</h4>
+                <span>中国公益基金会</span>
+            </div>
+            <div class="collect_m_conntent">
+                <div>
+                    <img src="/Images/pay/wechat.png" alt="Alternate Text" />
+                    <img src="/Images/pay/pay.png" alt="Alternate Text" />
+                </div>
+                <div>
+                    <span>sssddddddddddddd</span>
+                </div>
+            </div>
             <form action="/" method="post"></form>
         </div>
         <div onclick="closeCollect()" class="collect_m_close">
             <i class="fa fa-times fa-2x" aria-hidden="true"></i>
         </div>
     </div>
-
-    <footer class="clear">
-        <div>
-            <p>&copy2016 niko lan. All rights reserved. </p>
-        </div>
-    </footer
-    <script src="../Js/collect.js"></script>
+    <script src="/Js/collect.js"></script>
 </body>
 </html>

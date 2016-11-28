@@ -46,28 +46,27 @@
         <div style="clear:both"></div>
         <div class="adopt_deal_form">
             <h2>填写你的基本信息</h2>
+            <hr />
             <form id="form1" runat="server">
                 <div class="adopt_f">
-                    <asp:Label ID="Label1" runat="server" Text="姓名"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="真实姓名"></asp:Label>
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+
                     <asp:Label ID="Label2" runat="server" Text="手机号"></asp:Label>
                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+
                     <asp:Label ID="Label3" runat="server" Text="性别"></asp:Label>
-                    <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                    <asp:RadioButton ID="radSex" runat="server"  Text="男" Checked="true" GroupName="sex"/>
+                    <asp:RadioButton ID="radSex2" runat="server" Text="女" GroupName="sex" />
+                    <br />
                     <asp:Label ID="Label4" runat="server" Text="地址"></asp:Label>
                     <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                    <asp:Button ID="Button1" runat="server" Text="Button" />
+                    <asp:Button ID="Button1" runat="server" Text="提交" />
 
                 </div>
             </form>
         </div>
     </div>
-
-    <footer class="clear">
-        <div>
-            <p>&copy2016 niko lan. All rights reserved. </p>
-        </div>
-    </footer>
 
 </body>
 </html>

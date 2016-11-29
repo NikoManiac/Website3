@@ -6,8 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>主页</title>
-    <link href="Style/All.css" rel="stylesheet" />
-    <link href="Style/index.css" rel="stylesheet" />
+    <link href="/Style/All.css" rel="stylesheet" />
+    <link href="/Style/index.css" rel="stylesheet" />
     <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
                     <li><a href="#">动物</a></li>
                     <li><a href="#">领养</a></li>
                     <li><a href="#">募捐</a></li>
-                    <li><a href="#">照片</a></li>
+                    <li><a href="#">资讯</a></li>
                 </ul>
             </nav>
         </div>

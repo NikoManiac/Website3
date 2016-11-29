@@ -16,28 +16,7 @@ header {
     position:relative;
 }
 
-.sign {
-    position:absolute;
-    right:2em;
-    top:0.5em;
-}
-.sign span{
-    background-color:rgb(123,12,20);
-    padding:0.3em 0.5em;
-    border-radius:3px;
-}
 
-.sign img{
-    width:2em;
-    height:2em;
-    border-radius:50%;
-}
-.sign span a {
-    text-decoration:none;
-    color:rgb(255, 255, 255);
-    font-size:1em;
-    font-family:'Microsoft New Tai Lue';
-}
 .banner {
     padding:1em 0;
 }

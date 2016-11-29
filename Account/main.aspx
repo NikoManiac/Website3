@@ -8,6 +8,7 @@
     <title>流浪</title>
     <link href="/Style/All.css" rel="stylesheet" />
     <link href="/Style/Main.css" rel="stylesheet" />
+    <link href="/Style/sign.css" rel="stylesheet" />
     <link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -37,6 +38,7 @@
             </nav>
         </div>
     </header>
+    <form id="form1" runat="server">
     <div class="main_con">
         <div class="frist">
             <h5>
@@ -48,36 +50,21 @@
                 <!--3科普栏目一行内，分为左右两个部分，每个部分再分为两个部分，一个图片，一个文字-->
                 <div class="content_row">
                     <div class="left content_commen">
-                        <div>
-                            <div class="info_img">
-                                <img src="../Images/banner.jpg" alt="Alternate Text" />
-                            </div>
-                            <div class="information">
-                                <p>这是一条新闻的标题，这里有多消息</p>
-                            </div>
-                            <div style="clear:both"></div>
-                            <hr />
-                        </div>
-                        <div>
-                            <div class="info_img">
-                                <img src="../Images/banner.jpg" alt="Alternate Text" />
-                            </div>
-                            <div class="information">
-                                <p>这是一条新闻的标题，这里有多消息</p>
-                            </div>
-                            <div style="clear:both"></div>
-                            <hr />
-                        </div>
-                        <div>
-                            <div class="info_img">
-                                <img src="../Images/banner.jpg" alt="Alternate Text" />
-                            </div>
-                            <div class="information">
-                                <p>这是一条新闻的标题，这里有多消息</p>
-                            </div>
-                            <div style="clear:both"></div>
-                            <hr />
-                        </div>
+                        <asp:DataList ID="DataList2" runat="server" RepeatColumns="1" DataKeyField="id" RepeatDirection="Horizontal" OnItemCommand="DataList2_ItemCommand" Width="486px">
+                            <ItemTemplate>
+                                <div>
+                                    <div class="info_img">
+                                        <img src=<%#Eval("m_newsimagepath") %> alt="新闻图片" />
+                                    </div>
+                                    <div class="information">
+                                        <asp:LinkButton ID="LinkButton1" CommandName="detail" runat="server"><%#Eval("m_newsname") %></asp:LinkButton>
+                                    </div>
+                                    <div style="clear:both"></div>
+                                    
+                                </div>
+                                <hr />
+                            </ItemTemplate>
+                        </asp:DataList>
                     </div>
                     <div class="right content_commen">
                         <div class="content_img">
@@ -106,11 +93,11 @@
                         <div class="content_row">
                             <div class="left content_commen">
                                 <div class="content_img">
-                                    <img src=<%#Eval("animalimage") %> alt="Text" />
+                                    <img src=<%#Eval("m_animalimagepath") %> alt="Text" />
                                 </div>
                                 <div class="content_text">
-                                    <h5><%#Eval("animalname") %></h5>
-                                    <span class="content_text_span"><%#Eval("animalintr") %></span>
+                                    <h5><%#Eval("m_animalname") %></h5>
+                                    <p class="content_text_span"><%#Eval("m_animalcontent") %></p>
                                 </div>
                             </div>
                         </div>
@@ -119,6 +106,7 @@
             </div>
         </div>
     </div>
+    </form>
     <footer class="clear">
         <div>
             <p>&copy2016 niko lan. All rights reserved. </p>

@@ -45,6 +45,7 @@ a {
 
 
 .collect_content_detail {
+    margin-bottom:1em;
     border-bottom:solid 2px rgba(231,129,113,1);
     position:relative;
 }
@@ -62,7 +63,9 @@ a {
 
     width:800px;
     height:150px;
-    margin:1.5em 0em 0 0;
+    box-sizing:border-box;
+    padding:1em;
+    margin:1.5em 1em 0 1em;
     float:left;
 }
 .collect_button {

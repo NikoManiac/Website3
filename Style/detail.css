@@ -1,0 +1,41 @@
+﻿body{
+    font-family:FangSong;
+}
+.detail_main
+{
+    width:1024px;
+    margin:2em auto;
+    padding:2em;
+    box-sizing:border-box;
+    border:solid 1px rgba(231,129,112,1);
+    border-radius:3px;
+}
+.detail_title{
+    border-bottom:solid 1px rgba(220,220,220,0.8);
+    padding-bottom:1em;
+}
+.detail_title h4{
+    text-align:center;
+    font-family:FangSong;
+}
+
+.detail_time{
+    text-align:right;
+}
+.detail_time span{
+    font-family:FangSong;
+}
+.detail_content
+{
+    text-indent:2em;
+    text-align:center;
+}
+#content{
+    font-family:FangSong;
+}
+#img{
+    width:300px;
+    max-height:300px;
+    margin:2em auto;
+}
+

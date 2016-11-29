@@ -59,7 +59,9 @@
                         <asp:TextBox ID="TextAdoptAnimalName" runat="server"></asp:TextBox>
                         <asp:Label ID="Label8" runat="server" Text="动物品种"></asp:Label>
                         <asp:TextBox ID="TextAdoptAnimalClass" runat="server"></asp:TextBox>
-                        <asp:Label ID="Label9" runat="server" Text="动物年龄"></asp:Label>
+                        <asp:Label ID="Label9" runat="server" Text="动物介绍"></asp:Label>
+                        <asp:TextBox ID="TextAdoptAnimalContent" runat="server"></asp:TextBox>
+                        <asp:Label ID="Label20" runat="server" Text="动物年龄"></asp:Label>
                         <asp:TextBox ID="TextAdoptAnimalAge" runat="server"></asp:TextBox>
                         <asp:Label ID="Label19" runat="server" Text="动物图片"></asp:Label>
                         <asp:FileUpload ID="TextAdoptAnimalImage" runat="server" />
@@ -84,11 +86,11 @@
                     <h5>资讯管理</h5>
                     <div>
                         <asp:Label ID="Label13" runat="server" Text="资讯标题"></asp:Label>
-                        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextNewsName" runat="server"></asp:TextBox>
                         <asp:Label ID="Label14" runat="server" Text="资讯内容"></asp:Label>
-                        <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextNewsContent" runat="server"></asp:TextBox>
                         <asp:Label ID="Label15" runat="server" Text="资讯图片"></asp:Label>
-                        <asp:FileUpload ID="FileUpload5" runat="server" />
+                        <asp:FileUpload ID="TextNewsImage" runat="server" />
                         <asp:Button ID="Button5" runat="server" Text="提交" OnClick="Button5_Click" />
                     </div>
                     <hr />

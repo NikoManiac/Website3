@@ -1,18 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="news.aspx.cs" Inherits="Account_community" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="news_detail.aspx.cs" Inherits="Account_news_detail" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>资讯</title>
+    <title>新闻详情</title>
     <link href="/Style/All.css" rel="stylesheet" />
-    <link href="/Style/news.css" rel="stylesheet" />
+    <link href="/Style/detail.css" rel="stylesheet" />
     <link href="/Style/sign.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header style="height:3.5em;">
+    <header style="height:3.5em">
         <div class="sign">
             <asp:Image ID="Image1" CssClass="user_tilte" runat="server" />
             <div class="user_menu">
@@ -33,27 +33,24 @@
                     <li><a href="/Account/main.aspx">动物</a></li>
                     <li><a href="/Account/adopt.aspx">领养</a></li>
                     <li><a href="/Account/collect.aspx">募捐</a></li>
-                    <li><a href="/Account/newst.aspx">资讯</a></li>
+                    <li><a href="/Account/news.aspx">资讯</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <form id="form1" runat="server">
-        <div class="news_main">
-            <asp:DataList ID="DataList1" runat="server" RepeatColumns="1" DataKeyField="id" RepeatDirection="Horizontal" OnItemCommand="DataList1_ItemCommand">
-                <ItemTemplate>
-                    <div class="news_detail">
-                        <div class="news_img">
-                            <img src=<%#Eval("newsimagepath") %> alt="Alternate Text" />
-                        </div>
-                        <div class="news_title">
-                            <asp:LinkButton ID="LinkButton1" CommandName="detail" runat="server"><%#Eval("newsname") %></asp:LinkButton>
-                            <span><%#Eval("newstime") %></span>
-                        </div>
-                    </div>
-                </ItemTemplate>
-            </asp:DataList>
+    <div class="detail_main">
+
+        <div class="detail_title">
+            <h4 runat="server" id="title"></h4>
         </div>
-    </form>
+        <div class="detail_time">
+            <span runat="server" id="time"></span>
+        </div>
+        <div class="detail_content">
+            <img runat="server" id="img" alt="文章图片" />
+            <p runat="server" id="content"></p>
+        </div>
+
+    </div>
 </body>
 </html>

@@ -102,6 +102,7 @@ public partial class manage_manage : System.Web.UI.Page
         string TextAdoptAnimalNam = TextAdoptAnimalName.Text;
         string TextAdoptAnimalClas = TextAdoptAnimalClass.Text;
         string TextAdoptAnimalAg = TextAdoptAnimalAge.Text;
+        string TextAdoptAnimalConten = TextAdoptAnimalContent.Text;
         //开始验证上传图片
         if (TextAdoptAnimalImage.HasFile)
         {
@@ -116,12 +117,13 @@ public partial class manage_manage : System.Web.UI.Page
         //开始连接数据库
         SqlConnection conn = new SqlConnection(connStr);
         //SQL命令
-        string insertMess = "insert into adoptanimal(m_adoptname,m_adoptcontent,m_adoptimagepath,m_adoptage)values(@m_adoptname,@m_adoptcontent,@m_adoptimagepath,@m_adoptage)";
+        string insertMess = "insert into adoptanimal(m_adoptname,m_adoptcontent,m_adoptimagepath,m_adoptage,m_adoptcontent)values(@m_adoptname,@m_adoptcontent,@m_adoptimagepath,@m_adoptage,@m_adoptcontent)";
         SqlCommand cmd = new SqlCommand(insertMess, conn);
         cmd.Parameters.AddWithValue("@m_adoptname", TextAdoptAnimalNam);
         cmd.Parameters.AddWithValue("@m_adoptcontent", TextAdoptAnimalClas);
-        cmd.Parameters.AddWithValue("@m_adoptage", TextAdoptAnimalAg);
         cmd.Parameters.AddWithValue("@m_adoptimagepath", TextAdoptAnimalImagePath);
+        cmd.Parameters.AddWithValue("@m_adoptage", TextAdoptAnimalAg);
+        cmd.Parameters.AddWithValue("m_adoptcontent", TextAdoptAnimalConten);
         conn.Open();
         cmd.ExecuteNonQuery();
         conn.Close();
@@ -154,9 +156,33 @@ public partial class manage_manage : System.Web.UI.Page
         cmd.ExecuteNonQuery();
         conn.Close();
     }
+    //资讯-新闻的管理-------------------------------------------------------------------------------------------------
     protected void Button5_Click(object sender, EventArgs e)
     {
+        string TextNewsNam = TextNewsName.Text;
+        string TextNewsConten = TextNewsContent.Text;
+        //开始验证上传图片
+        if (TextNewsImage.HasFile)
+        {
+            if (CheckFileType(TextNewsImage.FileName))
+            {
+                string FilePath = "/Images/news/" + TextNewsImage.FileName;
+                TextNewsImage.SaveAs(MapPath(FilePath));
+            }
+        }
 
+        string TextNewsImagePath = "/Images/news/" + TextNewsImage.FileName;
+        //开始连接数据库
+        SqlConnection conn = new SqlConnection(connStr);
+        //SQL命令
+        string insertMess = "insert into news(newsname,newscontent,newsimagepath)values(@newsname,@newscontent,@newsimagepath)";
+        SqlCommand cmd = new SqlCommand(insertMess, conn);
+        cmd.Parameters.AddWithValue("@newsname", TextNewsNam);
+        cmd.Parameters.AddWithValue("@newscontent", TextNewsConten);
+        cmd.Parameters.AddWithValue("@newsimagepath", TextNewsImagePath);
+        conn.Open();
+        cmd.ExecuteNonQuery();
+        conn.Close();
     }
     protected void Button6_Click(object sender, EventArgs e)
     {

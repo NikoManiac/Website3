@@ -8,12 +8,21 @@
     <title>详情</title>
     <link href="/Style/All.css" rel="stylesheet" />
     <link href="/Style/AdoptDeal.css" rel="stylesheet" />
+    <link href="/Style/sign.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body style="background:rgb(248,248,248);">
     <header style="height:3.5em;">
         <div class="sign">
-            <span><a href="#">注册</a></span>
-            <span><a href="#">登录</a></span>           
+            <asp:Image ID="Image1" CssClass="user_tilte" runat="server" />
+            <div class="user_menu">
+                <ul>
+                    <li>兰一星</li>
+                    <li><a href="#">个人信息</a></li>
+                    <li><a href="#">设置</a></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
         </div>
         <div class="banner">
             <nav>
@@ -21,10 +30,10 @@
                     <li>
                         <h5>动物</h5>
                     </li>
-                    <li><a href="main.aspx">动物</a></li>
+                    <li><a href="/Account/main.aspx">动物</a></li>
                     <li><a href="/Account/adopt.aspx">领养</a></li>
                     <li><a href="/Account/collect.aspx">募捐</a></li>
-                    <li><a href="#">社区</a></li>
+                    <li><a href="/Account/newst.aspx">资讯</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,14 +41,14 @@
     <div class="adopt_deal_main">
         <div class="adopt_deal_an">
             <div>
-                <img src="../Images/banner.jpg" alt="Alternate Text" />
+                <img runat="server" id="image" alt="Alternate Text" />
 
             </div>
             <div class="adopt_deal_d">
-                <div><span>名字：</span><span style="font-family:FangSong;">小花</span></div>
-                <div><span>年龄：</span><span style="font-family:FangSong;">3</span></div>
+                <div><span>名字：</span><span runat="server" id ="name" style="font-family:FangSong;"></span></div>
+                <div><span>年龄：</span><span runat="server" id ="age" style="font-family:FangSong;"></span></div>
                 <div>
-                    <span>介绍：</span><span style="font-family:FangSong;">这是一只狗的介绍，他会重复很多遍有很多的细腻寻女</span>
+                    <span>介绍：</span><span runat="server" id ="content" style="font-family:FangSong;"></span>
                 </div>
             </div>
         </div>
@@ -50,18 +59,14 @@
             <form id="form1" runat="server">
                 <div class="adopt_f">
                     <asp:Label ID="Label1" runat="server" Text="真实姓名"></asp:Label>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxName" runat="server"></asp:TextBox>
 
                     <asp:Label ID="Label2" runat="server" Text="手机号"></asp:Label>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxPhone" runat="server"></asp:TextBox>
 
-                    <asp:Label ID="Label3" runat="server" Text="性别"></asp:Label>
-                    <asp:RadioButton ID="radSex" runat="server"  Text="男" Checked="true" GroupName="sex"/>
-                    <asp:RadioButton ID="radSex2" runat="server" Text="女" GroupName="sex" />
-                    <br />
                     <asp:Label ID="Label4" runat="server" Text="地址"></asp:Label>
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                    <asp:Button ID="Button1" runat="server" Text="提交" />
+                    <asp:TextBox ID="TextBoxDress" runat="server"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" Text="提交" OnClick="Button1_Click" />
 
                 </div>
             </form>

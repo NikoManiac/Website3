@@ -1,4 +1,6 @@
-﻿
+﻿body{
+    font-family:FangSong;
+}
 .setting_main{
     background-color:rgb(255, 255, 255);
     width:1024px;
@@ -9,4 +11,18 @@
 }
 .setting_main ul{
     list-style:none;
+    background:red;
 }
+
+.setting_content{
+    margin:1em;
+    background:red;
+}
+
+.setting_content li{
+    margin:1em;
+    color:red;
+    background:red;
+}
+
+
